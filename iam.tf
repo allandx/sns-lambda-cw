@@ -14,7 +14,7 @@ data "aws_iam_policy_document" "assume_role" {
 data "aws_iam_policy_document" "inline_policy_sns" {
   statement {
     actions   = ["sns:Publish"]
-    resources = ["arn:aws:sns:ap-southeast-1:255945442255:${var.sns_name}"]
+    resources = ["arn:aws:sns:ap-southeast-1:778024405189:${var.sns_name}"]
   }
 }
 
@@ -25,7 +25,7 @@ data "aws_iam_policy_document" "inline_policy_cloudwatch" {
         "logs:CreateLogStream",
         "logs:PutLogEvents",
         ]
-    resources = ["arn:aws:logs:ap-southeast-1:255945442255:log-group:/aws/lambda/${var.lambda_function_name}:*"]
+    resources = ["arn:aws:logs:ap-southeast-1:778024405189:log-group:/aws/lambda/${var.lambda_function_name}:*"]
   }
 }
 
